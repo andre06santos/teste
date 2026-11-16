@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Meu Aplicativo</title>
+
+  <meta name="theme-color" content="#2563eb">
+  <meta name="description" content="Meu primeiro aplicativo PWA">
+
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+</head>
+<body style="font-family: Arial; text-align: center; padding: 50px;">
+
+  <h1>Meu Aplicativo</h1>
+  <p>Meu primeiro site instalável como aplicativo!</p>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js");
+      });
+    }
+  </script>
+
+</body>
+</html>
